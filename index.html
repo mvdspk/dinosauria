@@ -21,12 +21,17 @@
     </div>
   </div>
   <script>
-    let dinoNames = documnet.getElementById('dino-names');
-    let html = '';
-    dinosaurs.forEach(dino => {
-      html += `<div class="dino-name"> ${dino}</div>`;
-    });
-    dinoNames.innerHTML = html;
+   function displayDinoNames(){
+       let dinoNames = document.getElementById('dino-names');
+      let html = '';
+      
+      dinosaurs.forEach(dino => {
+        html += `<div class="dino-name"> ${dino}</div>`;
+      });
+      dinoNames.innerHTML = html;
+    }
+    
+    document.querySelector('body').onload = displayDinoNames;
   </script>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
