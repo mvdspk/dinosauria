@@ -13,5 +13,12 @@ const dinosaurs = [
 "stegosaurus",
 "tricearatops",
 "velociraptor",
-
+  "deinonychuses",
+  "pteranodon",
+  "albertosaurus",
+  "carcharodontosaurus",
+  "deltadromeus",
+  "dilophosaurus",
+  "argentinosaurus",
+  "Edamontonia"
 ];
