@@ -9,10 +9,10 @@ const dinosaurs = [
   "ankylosaurus",
   "brachiosurus",
   "giganotosaurus",
-"ornithomimus",
-"stegosaurus",
-"tricearatops",
-"velociraptor",
+  "ornithomimus",
+  "stegosaurus",
+  "tricearatops",
+  "velociraptor",
   "deinonychuses",
   "pteranodon",
   "albertosaurus",
@@ -20,5 +20,5 @@ const dinosaurs = [
   "deltadromeus",
   "dilophosaurus",
   "argentinosaurus",
-  "Edamontonia"
+  "Edamontonia",
 ];

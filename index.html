@@ -1,43 +1,106 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+    <script src="./data.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./bootstrap.min.css" crossorigin="anonymous" />
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <script src="./data.js" crossorigin="anonymous"></script>
+    <title>Dinosaurs Collection By Karthik</title>
+  </head>
 
-  <title>Dinosaurs Collection By Karthik</title>
-</head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">Karthik's Dinosaurs Collection</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarColor01"
+        aria-controls="navbarColor01"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<body>
-  <h1 class="text-center">Karthik's Dinosaurs Collection</h1>
-  <div class="container">
-    <div id="dino-names" style="overflow:scroll; width:100%; height:100vh">
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="text"
+            placeholder="Search"
+          />
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </nav>
 
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-3">Karthik's Dinosaurs Collection</h1>
+        <p class="lead">Collection of dinosaurs and fun games</p>
+      </div>
+
+      <div
+        id="dino-names"
+        class="justify-content-center"
+        style="overflow: scroll; width: 100%; height: 100vh"
+      >
+        <div class="header">
+          <h2 class="text-center"><span id="dino-count"></span> Dinsoaurs collected yet !!</h2>
+        </div>
+
+        <div class="content"></div>
+      </div>
     </div>
-  </div>
-  <script>
-   function displayDinoNames(){
-       let dinoNames = document.getElementById('dino-names');
-      let html = '';
-      
-      dinosaurs.forEach(dino => {
-        html += `<div class="dino-name"> ${dino}</div>`;
-      });
-      dinoNames.innerHTML = html;
-    }
-    
-    document.querySelector('body').onload = displayDinoNames;
-  </script>
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-</body>
+    <script>
+      function displayDinoNames() {
+        let dinoNames = document.querySelector("#dino-names .content");
+        let html = "";
+        document.querySelector("#dino-count").innerHTML = dinosaurs.length;
+        dinosaurs.forEach((dino, i) => {
+          html += `<div class="lead dino-name" style="width:70%;margin:auto;font-size: xxx-large;"><span>${
+            i + 1
+          }.</span> ${dino}</div>`;
+        });
+        dinoNames.innerHTML = html;
+      }
 
+      document.querySelector("body").onload = displayDinoNames;
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
