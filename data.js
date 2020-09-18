@@ -20,5 +20,4 @@ const dinosaurs = [
   "deltadromeus",
   "dilophosaurus",
   "argentinosaurus",
-  "Edamontonia",
-];
+  "Edamontonia","compsognathus","archaeornithomimus","scuttellosaurus","scansoriopteryx","psittacosaurus","archaeopteryx","minmi","buitreraptor","leaellynasaura","huayangosaurus","struthiomimus","herrerasauris","styracosaurus","pentaceratops"];
