@@ -76,11 +76,12 @@
     let dataURL = 'https://mvdspk.github.io/dinosauria/data/index.json';
     fetch(dataURL)
         .then(response => response.json())
-        .then(dinoNamesJSONArray => {
+        .then(data => {
+      let datadinoNamesJSONArray = data['dinoNames'];
             let dinoNames = document.querySelector("#dino-names .content");
             let html = "";
             document.querySelector("#dino-count").innerHTML = dinosaurs.length;
-            dinoNamesJSONArray.forEach((dino, i) => {
+            datadinoNamesJSONArray.forEach((dino, i) => {
                 html += `<div class="lead dino-name" style="width:70%;margin:auto;font-size: xxx-large;"><span>${
             i + 1
           }.</span> ${dino}</div>`;
