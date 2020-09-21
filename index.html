@@ -77,11 +77,11 @@
     fetch(dataURL)
         .then(response => response.json())
         .then(data => {
-      let datadinoNamesJSONArray = data['dinoNames'];
+      let dinoNamesJSONArray = data['dinoNames'];
             let dinoNames = document.querySelector("#dino-names .content");
             let html = "";
             document.querySelector("#dino-count").innerHTML = dinosaurs.length;
-            datadinoNamesJSONArray.forEach((dino, i) => {
+            dinoNamesJSONArray.forEach((dino, i) => {
                 html += `<div class="lead dino-name" style="width:70%;margin:auto;font-size: xxx-large;"><span>${
             i + 1
           }.</span> ${dino}</div>`;
