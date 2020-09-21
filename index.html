@@ -72,23 +72,22 @@
     </div>
     <script>
       function displayDinoNames() {
-        let dinoNames = document.querySelector("#dino-names .content");
-        let html = "";
-        document.querySelector("#dino-count").innerHTML = dinosaurs.length;
-        dinosaurs.forEach((dino, i) => {
-          html += `<div class="lead dino-name" style="width:70%;margin:auto;font-size: xxx-large;"><span>${
+    // fetch
+    let dataURL = 'https://mvdspk.github.io/dinosauria/data/index.json';
+    fetch(dataURL)
+        .then(response => response.json())
+        .then(dinoNamesJSONArray => {
+            let dinoNames = document.querySelector("#dino-names .content");
+            let html = "";
+            document.querySelector("#dino-count").innerHTML = dinosaurs.length;
+            dinoNamesJSONArray.forEach((dino, i) => {
+                html += `<div class="lead dino-name" style="width:70%;margin:auto;font-size: xxx-large;"><span>${
             i + 1
           }.</span> ${dino}</div>`;
+            });
+            dinoNames.innerHTML = html;
         });
-        dinoNames.innerHTML = html;
-        
-        // fetch
-        let dataURL= 'https://mvdspk.github.io/dinosauria/data/index.json';
-        console.log(`fetch ${dataURL}`);
-         fetch(dataURL)
-                .then(response => response.json())
-                .then(json => console.log(json));
-      }
+}
 
       document.querySelector("body").onload = displayDinoNames;
     </script>
