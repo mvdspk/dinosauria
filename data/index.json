@@ -1,6 +1,6 @@
 {
   "dinoNames": [
-    "Tyrannosaurus Rex",
+    { "name": "Tyrannosaurus Rex", "art": "trex.JPG" },
     "Spinosaurus",
     "microraptor",
     "micropachycephalosaurus",
