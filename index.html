@@ -77,7 +77,7 @@
     <script>
       function displayDinoNames() {
         // fetch
-        let dataURL = "https://mvdspk.github.io/dinosauria/data/index.json";
+        let dataURL = "https://localhost:5500/data/index.json";
         fetch(dataURL)
           .then((response) => response.json())
           .then((data) => {
@@ -95,7 +95,7 @@
                 html += `<div class="lead dino-name" style="width:70%;margin:auto;font-size: xxx-large;"><span>${
                   i + 1
                 }.</span> ${dino.name}
-                <img class="image-fluid" src="assets/art/${dino.art}"/>
+                <img class="image-fluid" src="data/assets/art/${dino.art}"/>
                 </div>`;
               }
             });
